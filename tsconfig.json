@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"target": "es6",       // 該設置更改了哪些 JS 特性被降級，哪些保持不變。例如如果是 ES5 或更低版本，箭頭函數() => this 將被轉換為等效 function 表達式
+		"outDir": "dist",
+		"module": "commonjs",
+		"jsx": "preserve",	      // 控制如何在 JavaScript 文件中發出 JSX 構造，這只會影響 .tsx 文件中開始的 JS 文件的輸出
+		"sourceMap": true,        // 生成相應的 .map 文件，以便在生產代碼中用於調試
+		"noImplicitAny": true,    // true 為如果沒註明類型，會提示錯誤
+		"strict": true,           // 啟用廣泛的類型檢查行為，從而更好地保證程序的正確性
+		"noEmit": true,           // 不要發出編譯器輸出文件，如 JavaScript 源代碼、源映射或聲明
+    "esModuleInterop": true,  // true 為改變編譯器的行為，由兩個新的輔助函數修復，它們提供了一個填充來確保發出的 JavaScript 的兼容性，也會跟著啟用 allowSyntheticDefaultImports
+		"allowSyntheticDefaultImports": true,    // 允許合成默認導入
+	},
+	"include": ["./src/"],      // 指定只應包含 src 文件夾中的文件
+	"exclude": ["node_modules"]
+}
